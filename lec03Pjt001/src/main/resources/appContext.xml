@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 위의 태그가 항상 1번 라인에 존재해야하는 이유는? -->
+<!-- 스프링 설정파일 : spring container에 bean 객체를 생성 후 할당하는 xml파일 -->
+
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans 
+ 		http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<!-- spring container (IoC) 에 해당 객체(bean)를 생성 후 할당-->
+	<bean id="welcome" class="lec03Pjt001.Welcome" />
+	
+</beans>
