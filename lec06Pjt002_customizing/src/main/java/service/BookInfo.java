@@ -1,10 +1,14 @@
+/* dependency 객체 
+ * spring container에 injection
+ * postInfo객체에 injection
+ * */
+
 package service;
 
 public class BookInfo {
 	
 	private String bookName = "미등록자";
-	private String writer = "히가시노 게이고";
-	
+       
 	// constructor
 	public BookInfo() {}
 
@@ -15,13 +19,4 @@ public class BookInfo {
 	public void setBookName(String bookName) {
 		this.bookName = bookName;
 	}
-
-	
-	public String getWriter() {
-		return writer;
-	}
-	public void setWriter(String writer) {
-		this.writer = writer;
-	}
-	
 }

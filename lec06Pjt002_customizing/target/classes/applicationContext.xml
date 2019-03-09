@@ -1,21 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<!-- spring container 생성 및 DI설정 파일 -->
+
 
 <beans xmlns="http://www.springframework.org/schema/beans"
 		xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 		xsi:schemaLocation="http://www.springframework.org/schema/beans 
  		http://www.springframework.org/schema/beans/spring-beans.xsd">
 
-	<bean id="bookInfo" class="service.BookInfo" ></bean>
+	<bean id="bookInfo" class="service.BookInfo" />
 
- 	
-	<bean id="memberInfo" class="service.MemberInfo" ></bean>
- 	
-<!-- 	
-	// [중요] 이해가 필요한 부분!
-	<bean id="memberInfo" class="service.MemberInfo">
-		<constructor-arg ref="박광호" ></constructor-arg>
+	<!-- dependency 객체에 다른 객체를 주입 (생성자를 이용한 주입) -->
+	<!-- [고민] 다수의 객체를 주입하는 방법은??? -->
+	<bean id="postInfo" class="service.PostInfo" >
+		<constructor-arg ref="bookInfo"></constructor-arg>
+		<property name="number" value="2"/>
 	</bean>
- -->	
- 
+	
+	<!-- prototype scope로 설정 후 dependency 객체 생성 -->
+	<bean id="selectUser" class="service.SelectUser" scope="prototype"/>
  
 </beans>
