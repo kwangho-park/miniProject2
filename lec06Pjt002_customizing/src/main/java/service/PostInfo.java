@@ -1,14 +1,14 @@
-/* dependency 객체 
- * spring container에 injection
+/* bean 객체 
+ * spring container에 생성됨
  * */
 
 package service;
 
 public class PostInfo {
 
-	private String title = "인생 띵작";
 	private int number = 1;
-	
+	private String title = "인생 띵작";
+
 	private BookInfo bookInfo;
 	
 	// constructor
@@ -16,15 +16,6 @@ public class PostInfo {
 		this.bookInfo = bookInfo;
 	}
 
-	
-	public String getTitle() {
-		return title;
-	}
-	public void setUserName(String title) {
-		this.title = title;
-	}
-
-	
 	public int getNumber() {
 		return number;
 	}
@@ -32,7 +23,15 @@ public class PostInfo {
 		this.number = number;
 	}
 
+	
+	public String getTitle() {
+		return title;
+	}
+	public void setTitle(String title) {
+		this.title = title;
+	}
 
+	
 	public BookInfo getBookInfo() {
 		return bookInfo;
 	}

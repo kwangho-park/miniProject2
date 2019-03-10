@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Bean 객체 설정 및 생성 후 container에 할당  -->
+
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+		xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+		xsi:schemaLocation="http://www.springframework.org/schema/beans 
+ 		http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<bean id="bookInfo" class="service.BookInfo" />
+
+	<!-- bean 객체에 dependency 객체를 injection (생성자,setter를 이용) -->
+	<bean id="postInfo" class="service.PostInfo" >
+		<constructor-arg ref="bookInfo"></constructor-arg>
+		<property name="number" value="2"/>
+	</bean>
+	
+	<!-- bean 객체를 prototype scope로 설정 -->
+	<bean id="selectUser" class="service.SelectUser" scope="prototype"/>
+ 
+</beans>
