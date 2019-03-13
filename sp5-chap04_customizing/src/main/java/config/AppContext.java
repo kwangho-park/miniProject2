@@ -13,7 +13,6 @@ import service.LoginUser;
 import service.PostInfo;
 import service.SelectUser;
 
-
 @Configuration
 public class AppContext {
 	
@@ -31,10 +30,10 @@ public class AppContext {
 	
 	////////////////////////////////////////////////////////////////////
 	
-	
+
 	// dependency 객체 (=bean객체)	
 	// Qualifier 로 dependency 객체를 injection 할 bean 객체를 명시	
-	@Bean	
+	@Bean
 	@Qualifier("login")
 	public LoginUser loginUser1() {
 		return new LoginUser();
@@ -44,14 +43,11 @@ public class AppContext {
 		return new LoginUser();
 	}
 
-	
 	// bean객체
 	@Bean	
 	public SelectUser selectUser() {
 		return new SelectUser();
 	}	
-	
-	
-	
+
 } // AppContext END
 

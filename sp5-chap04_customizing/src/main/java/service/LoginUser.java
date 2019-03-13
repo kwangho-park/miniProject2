@@ -2,7 +2,7 @@
 package service;
 
 public class LoginUser {
-	private String id = "BoYong30";
+	private String id = "BoYong90";
 
 	public LoginUser() {}
 	

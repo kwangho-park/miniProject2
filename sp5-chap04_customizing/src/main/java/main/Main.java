@@ -18,6 +18,7 @@ public class Main {
 		BookInfo bookInfo = null;		PostInfo postInfo = null;	
 		SelectUser selectUser = null;
 		
+
 		AnnotationConfigApplicationContext ctx = new AnnotationConfigApplicationContext(AppContext.class);
 		
 		
@@ -30,13 +31,10 @@ public class Main {
 
 		////////////////////////////////////////////////////////////
 		
-		
-		
 		selectUser = ctx.getBean("selectUser", SelectUser.class);
 		
 		System.out.println("ID : "+selectUser.getLoginUser().getId());		// ID : BoYong30
 		
-
 		ctx.close();
 	}
 }
